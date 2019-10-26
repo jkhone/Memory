@@ -10,18 +10,22 @@ html{
 
 body {
     height: 100vh;
-    background: blue;
+    background: url(./assets/background.jpg);
     display: flex;
+    flex-direction: column;
 }
 
+/* #logo {
+    transform: scale(.10);
+} */
+
 .memory-game {
-    width: 800px;
-    height: 800px;
+    width: 640px;
+    height: 640px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
-    border: 2px solid lime;
 }
 
 .memory-card {
@@ -46,13 +50,12 @@ body {
 .front-face,
 .back-face
 {
-    border: 2px solid deeppink ;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 15px;
     position: absolute;
     border-radius: 5px;
-    background: deepskyblue;
+    background: rgba(0, 191, 255, 0.253);
     backface-visibility: hidden;
 }
 

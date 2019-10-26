@@ -60,7 +60,8 @@ function disableCards() {
      // Match
      firstCard.removeEventListener('click', flipCard)
      secondCard.removeEventListener('click', flipCard)
-
+    score++ 
+    console.log(score)
      resetBoard()
 }
 
@@ -74,7 +75,7 @@ function unflipCards() {
         secondCard.classList.remove('flip')
 
         resetBoard()
-    }, 1500)
+    }, 1000)
 }
 
 // Resets board
