@@ -11,13 +11,11 @@ html{
 body {
     height: 100vh;
     background: url(./assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
 }
-
-/* #logo {
-    transform: scale(.10);
-} */
 
 .memory-game {
     width: 640px;
@@ -63,3 +61,16 @@ body {
     transform: rotateY(180deg);
 }
 
+.lives {
+    width: 300px;
+    margin: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.reset {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}

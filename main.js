@@ -17,15 +17,14 @@ deck.forEach(l => {
 })
 $('.memory-game').html(gamecards)
 
-
-
 var cards = document.querySelectorAll('.memory-card')
 // Variables
 let hasFlippedCard = false
 let lockBoard = false
 let firstCard, secondCard
 let score = 0
-let lives = 15
+let lives = 10
+$('.lives').html(`You have ${lives} attempts left.`)
 
 // Function that flips cards and does check
 function flipCard() {
@@ -62,6 +61,9 @@ function disableCards() {
      secondCard.removeEventListener('click', flipCard)
     score++ 
     console.log(score)
+    setTimeout(() => {
+        gameOver()
+    },1000)
      resetBoard()
 }
 
@@ -73,9 +75,25 @@ function unflipCards() {
      setTimeout(() => {
         firstCard.classList.remove('flip')
         secondCard.classList.remove('flip')
-
+        lives--
+        console.log(lives)
+        $('.lives').html(`You have ${lives} attempts left`)
+        setTimeout(() => {
+            gameOver()
+        },1000)
         resetBoard()
     }, 1000)
+}
+
+// Shows win or loss
+function gameOver() {
+    if (lives === 0) {
+        $('.lives').html(`No more attempts. YOU LOSE!`)
+        $('.reset').html(`<a href="./newgame.html"><button class="glow-on-hover" type="button">PLAY AGAIN?</button></a>`)
+    } else if (score === 10) {
+        $('.lives').html(`You've matched them all. YOU WIN!`)
+        $('.reset').html(`<a href="./newgame.html"><button class="glow-on-hover" type="button">PLAY AGAIN?</button></a>`)
+    }
 }
 
 // Resets board
