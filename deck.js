@@ -1,4 +1,5 @@
 // Array of deck and each card in it
+// These cards will all be randomly distributed faced down
 var deck = [
     {
         name: 'exodia',
@@ -54,7 +55,6 @@ var deck = [
     },
     {
         name: 'reborn',
-        value: 7,
         front: './assets/monsterreborn.png',
     },
     {

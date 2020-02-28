@@ -1,3 +1,4 @@
+/* Styles for new game screen */
 html{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -25,6 +26,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* Animation CSS for new game button  */
 
 .glow-on-hover {
     width: 220px;
